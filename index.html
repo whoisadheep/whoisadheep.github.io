@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.S Public School - Excellence in Education</title>
+    <meta name="description" content="S.S Public School - English Medium Co-education school providing quality education and holistic development for students.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='15'%20fill='%231e3a8a'/%3E%3Ctext%20x='50%25'%20y='50%25'%20dominant-baseline='central'%20text-anchor='middle'%20font-size='50'%20font-weight='bold'%20fill='white'%20font-family='Arial'%3ESS%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='15'%20fill='%231e3a8a'/%3E%3Ctext%20x='50%25'%20y='50%25'%20dominant-baseline='central'%20text-anchor='middle'%20font-size='50'%20font-weight='bold'%20fill='white'%20font-family='Arial'%3ESS%3C/text%3E%3C/svg%3E">
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loader-wrapper">
+        <div class="loader-content">
+            <svg class="pencil" viewBox="0 0 200 200" width="200px" height="200px" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <clipPath id="pencil-clip">
+                        <path d="M0 200 L200 200 L200 0 L0 0 Z"></path>
+                    </clipPath>
+                </defs>
+                <path class="pencil-body" d="M128.5,3.5 L159.2,34.2 L42.1,151.3 L11.4,120.6 L128.5,3.5 Z"></path>
+                <path class="pencil-eraser" d="M159.2,34.2 L181.7,56.7 L140.6,97.8 L118.1,75.3 L159.2,34.2 Z"></path>
+                <path class="pencil-eraser-band" d="M140.6,97.8 L118.1,75.3 L128.5,64.9 L151,87.4 L140.6,97.8 Z"></path>
+                <path class="pencil-tip" d="M42.1,151.3 L21,172.4 L0.9,151.3 L11.4,120.6 L42.1,151.3 Z"></path>
+            </svg>
+            <svg class="line" viewBox="0 0 500 50" width="500px" height="50px" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 25 L490 25"></path>
+            </svg>
+            <div class="loader-text">Loading Excellence...</div>
+        </div>
+    </div>
+
+
+    <!--Header-->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <!-- Placeholder for the logo -->
+                        <img src="img/logo.png" alt="S.S Public School Logo" onerror="this.onerror=null;this.src='https://placehold.co/80x80';">
+                    </div>
+                    <div class="title">
+                        <h1>S.S Public School</h1>
+                        <p>English Medium Co-education</p>
+                    </div>
+                </div>
+                <div class="info">
+                    <div>
+                        <b>Phone:</b><p>+91 9936742844, 9936730244</p>
+                    </div>
+                    <div>
+                        <b>Email:</b><p>sspublic07@gmail.com</p>
+                    </div>
+                </div>
+                <!-- Mobile Menu Toggle Button -->
+                <button class="mobile-menu-toggle" id="menu-open-btn" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!--Navigation Sidebar-->
+    <nav id="mobile-sidebar">
+        <div class="sidebar-header">
+            <h3>Menu</h3>
+            <button class="mobile-menu-close" id="menu-close-btn" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#admission">Admission</a></li>
+            <li><a href="#management">Management</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+
+
+    <!--Main Content-->
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Shaping Future Leaders</h2>
+                    <p>At S.S. Public School, we provide a nurturing environment that fosters academic excellence, 
+                        creativity, and character development. Our holistic approach to education prepares students 
+                        for the challenges of tomorrow.</p>
+                    <a href="#admission" class="btn">Apply Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!--About Section-->
+        <section class="section" id="about">
+            <div class="container">
+                <h2>About our School</h2>
+                <div class="about-grid">
+                    <div class="about-card scroll-animate">
+                        <h3>Our Mission</h3>
+                        <p>To empower students with knowledge, skills, and values that will enable them to become 
+                            responsible global citizens and lifelong learners in an ever-changing world.</p>
+                    </div>
+                    <div class="about-card scroll-animate">
+                        <h3>Our Vision</h3>
+                        <p>To be a premier educational institution that nurtures innovation, critical thinking, and 
+                            compassion while maintaining the highest standards of academic excellence.</p>
+                    </div>
+                    <div class="about-card scroll-animate">
+                        <h3>Our Values</h3>
+                        <p>Integrity, Respect, Excellence, Innovation, and Community. These core values guide every 
+                            aspect of our educational approach and school culture.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="section" id="gallery">
+            <div class="container">
+                <h2>Our Gallery</h2>
+                <p class="gallery-intro">Explore moments from our school life</p>
+                
+                <div class="simple-gallery">
+                    <div class="gallery-container">
+                        <div class="gallery-slide active">
+                            <img src="img/4.jpeg" alt="Classroom learning" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/3.jpeg" alt="School event" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/1.jpeg" alt="Sports day" loading="lazy">
+                        </div>
+                        
+                        <button class="gallery-nav prev" aria-label="Previous image">&#10094;</button>
+                        <button class="gallery-nav next" aria-label="Next image">&#10095;</button>
+                    </div>
+                    
+                    <div class="gallery-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Academics Section-->
+        <section class="section" id="academics">
+            <div class="container">
+                <h2>Academics</h2>
+                <div class="about-grid">
+                    <div class="about-card scroll-animate">
+                        <h3>Curriculum</h3>
+                        <p>We follow a comprehensive curriculum that combines CBSE guidelines with innovative teaching 
+                            methodologies to ensure holistic development of our students.</p>
+                    </div>
+                    <div class="about-card scroll-animate">
+                        <h3>Facilities</h3>
+                        <p>State-of-the-art laboratories, well-stocked library, smart classrooms, and sports facilities 
+                            provide students with all they need to excel in their studies.</p>
+                    </div>
+                    <div class="about-card scroll-animate">
+                        <h3>Co-curricular</h3>
+                        <p>From sports to arts, music to debate, we offer a wide range of activities that help students 
+                            discover and develop their talents beyond academics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Admission Section-->
+        <section class="section" id="admission">
+            <div class="container">
+                <h2>Admission Process</h2>
+                <div class="admission-content scroll-animate">
+                    <h3>Join our Learning Community</h3>
+                    <p>We welcome applications from students who demonstrate academic potential and a commitment to our 
+                        school values. Our admission process is designed to be transparent and fair.</p>
+                    
+                    <h4 style="margin-top: 30px;">Steps for Admission:</h4>
+                    <ol style="margin-top: 20px; padding-left: 20px;">
+                        <li>Submit the online application form</li>
+                        <li>Attend the entrance assessment (for applicable grades)</li>
+                        <li>Participate in the interaction session</li>
+                        <li>Receive admission decision</li>
+                        <li>Complete enrollment formalities</li>
+                    </ol>
+                    
+                    <h4 style="margin-top: 30px;">Required Documents:</h4>
+                    <ul class="documents-list" style="margin-top: 20px;">
+                        <li class="scroll-animate">Birth Certificate (original + photocopy)</li>
+                        <li class="scroll-animate">Two Passport size photographs</li>
+                        <li class="scroll-animate">One family photograph(postcard size)</li>
+                        <li class="scroll-animate">Aadhaar Card (photocopy) of both child and parents</li>
+                        <li class="scroll-animate">Previous school report cards (if applicable)</li>
+                        <li class="scroll-animate">Transfer Certificate (for grades 2 and above)</li>
+                        <li class="scroll-animate">UDISE Code of last school</li>
+                        <li class="scroll-animate">AAPAR ID if generated in the last school</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!--Management Section-->
+        <section class="section" id="management">
+            <div class="container">
+                <h2>Our Management</h2>
+                <div class="management-content scroll-animate">
+                    <h3>Meet Our Leaders</h3>
+                    <p style="text-align: center; margin-bottom: 40px; color: var(--text-light);">Our management team is dedicated to providing strategic direction and ensuring the highest 
+                        standards of education and administration.</p>
+                    
+                    <div class="management-grid">
+                        <div class="management-card">
+                            <div class="management-avatar">
+                                <img src="img/MS.png" alt="Meena Singh - Chairman" onerror="this.onerror=null;this.src='https://placehold.co/120x120';">
+                            </div>
+                            <h4>Meena Singh</h4>
+                            <p>Chairman</p>
+                        </div>
+                        <div class="management-description">
+                            <p>"Learning gives creativity, creativity leads to thinking, thinking provides knowledge, 
+                                and knowledge makes you great." — Dr. A.P.J. Abdul Kalam</p>
+                            <p>As the Principal of the school, I consider myself fortunate to be a part of an educational 
+                                institution where every contributor is a learner and every day is an opportunity to discover, 
+                                create and innovate. We look at ourselves as a coterie of learners, where everyone learns 
+                                including our staffs, students and parents.</p>
+                        </div>
+                    </div>
+
+                    <div class="management-grid">
+                        <div class="management-card">
+                            <div class="management-avatar"><img src="img/VS.jpg" alt="Vijay Singh - Director" onerror="this.onerror=null;this.src='https://placehold.co/120x120';"></div>
+                            <h4>Vijay Singh</h4>
+                            <p>Director</p>
+                        </div>
+                        <div class="management-description">
+                            <p>Our child centred philosophy has made us more dedicated to improving the learning process with a 
+                                better understanding of how kids learn. The goal is to lead from the front through the teachers 
+                                who act as role models for them by promoting and encouraging them in all fields of their own talent 
+                                itself.</p>
+                            <p>Our focus on addressing each child's unique needs leads to constant recognition and validation of 
+                                our commitment to children and to making changes that improve the learning process. The school 
+                                believes in the 'Service before Self' which reflects the inner soul and the essence of the 
+                                functioning of the school.</p>
+                        </div>
+                    </div>
+
+                    <div class="management-grid">
+                        <div class="management-card">
+                            <div class="management-avatar"><img src="img/RS.jpg" alt="Radhey Shyam Singh - Nominated Minister" onerror="this.onerror=null;this.src='https://placehold.co/120x120';"></div>
+                            <h4>Radhey Shyam Singh</h4>
+                            <p>Nominated Minister</p>
+                            <p>(U.P. State)</p>
+                        </div>
+                        <div class="management-description">
+                            <p>"An investment in knowledge pays the best interest."</p>
+                            <p>I believe that a school should provide educational and cultural experiences which encourage each 
+                                student to develop an enquiring mind. The school provides a totally balanced environment focused 
+                                on shaping children into leaders of tomorrow. We offer comprehensive education through a 
+                                developmental approach.</p>
+                            <p>Our school environment promotes order, independence, a love for learning, a connection to the 
+                                world and a sense of social responsibility.</p>
+                        </div>
+                    </div>
+
+                    <div class="management-grid">
+                        <div class="management-card">
+                            <div class="management-avatar"><img src="img/BS.jpg" alt="Baljeet Singh - Principal" onerror="this.onerror=null;this.src='https://placehold.co/120x120';"></div>
+                            <h4>Baljeet Singh</h4>
+                            <p>M.A. (Eng.) B.Ed., M.Lib.</p>
+                            <p>Principal</p>
+                        </div>
+                        <div class="management-description">
+                            <p>"Education is the key to unlock the golden door of freedom." – George Washington Carver</p>
+                            <p>What is so special about S.S. Public School? For me there are few things, which make our school 
+                                education distinctive. "Life is a long journey where each one of us moves ahead conquering one 
+                                milestone after another. The traveler moves on but the imprints remain embedded on the sands of time."</p>
+                            <p>This is how our school runs ahead carrying its entire great past memories and cherished moments 
+                                and leaving the imprints of success on the pages of its golden history. The main motto of our 
+                                school is to achieve success for each of its kids by shedding every drop of its sweat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Contact Section-->
+        <section class="section" id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-grid">
+                    <div class="contact-card scroll-animate">
+                        <div class="contact-icon">📞</div>
+                        <h4>Phone</h4>
+                        <p>+91 9936742844</p>
+                        <p>+91 9936730244</p>
+                        <p>Office Hours: 8:00 AM - 4:00 PM</p>
+                    </div>
+                    <div class="contact-card scroll-animate">
+                        <div class="contact-icon">✉️</div>
+                        <h4>Email</h4>
+                        <p>sspublic07@gmail.com</p>
+                    </div>
+                    <div class="contact-card scroll-animate">
+                        <div class="contact-icon">📍</div>
+                        <h4>Address</h4>
+                        <p>Ratanpur, Sariya Road</p>
+                        <p>Pipraich, Gorakhpur</p>
+                        <p>Uttar Pradesh, India</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <a href="#">Facebook</a><br>
+                    <a href="#">Twitter</a><br>
+                    <a href="#">Instagram</a><br>
+                    <a href="#">YouTube</a><br>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 S.S. Public School. All Rights Reserved. | Designed with ❤️ for Education</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Loading Screen ---
+            window.addEventListener('load', () => {
+                const loader = document.getElementById('loader-wrapper');
+                // Add 'loaded' class to body to trigger fade-out animation
+                document.body.classList.add('loaded');
+            });
+            
+            // --- Scroll Animation Logic ---
+            const scrollElements = document.querySelectorAll('.scroll-animate');
+
+            const elementInView = (el, dividend = 1) => {
+                const elementTop = el.getBoundingClientRect().top;
+                return (
+                    elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+                );
+            };
+
+            const displayScrollElement = (element) => {
+                element.classList.add('animate');
+            };
+
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el, 1.25)) {
+                        displayScrollElement(el);
+                    }
+                });
+            };
+            
+            // Initial check on load
+            handleScrollAnimation();
+            window.addEventListener('scroll', handleScrollAnimation);
+
+            // --- Smooth Scrolling for Anchor Links ---
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        // Close sidebar before scrolling
+                        if (document.body.classList.contains('sidebar-open')) {
+                            document.body.classList.remove('sidebar-open');
+                        }
+                        
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // --- Mobile Sidebar Logic ---
+            const sidebar = document.getElementById('mobile-sidebar');
+            const openBtn = document.getElementById('menu-open-btn');
+            const closeBtn = document.getElementById('menu-close-btn');
+            const overlay = document.getElementById('overlay');
+            const navLinks = sidebar.querySelectorAll('a');
+
+            const openSidebar = () => {
+                document.body.classList.add('sidebar-open');
+            };
+
+            const closeSidebar = () => {
+                document.body.classList.remove('sidebar-open');
+            };
+
+            openBtn.addEventListener('click', openSidebar);
+            closeBtn.addEventListener('click', closeSidebar);
+            overlay.addEventListener('click', closeSidebar);
+            
+            // Close sidebar when a nav link is clicked
+            navLinks.forEach(link => {
+                link.addEventListener('click', closeSidebar);
+            });
+        });
+        // Simple Gallery Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.gallery-slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.gallery-nav.prev');
+    const nextBtn = document.querySelector('.gallery-nav.next');
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+
+    // Show current slide
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentSlide = index;
+    }
+
+    // Next slide
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    // Previous slide
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    // Event listeners
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+    
+    dots.forEach(dot => {
+        dot.addEventListener('click', function() {
+            showSlide(parseInt(this.dataset.slide));
+        });
+    });
+
+    // Auto slide change every 5 seconds
+    let slideInterval = setInterval(nextSlide, 5000);
+
+    // Pause on hover
+    const galleryContainer = document.querySelector('.gallery-container');
+    galleryContainer.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
+    });
+    
+    galleryContainer.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(nextSlide, 5000);
+    });
+});
+
+    </script>
+</body>
+</html>
