@@ -267,6 +267,72 @@ body {
 }
 
 /* Featured Documents Row */
+
+.doc-item {
+  background: #f8fafc;
+  border-radius: 15px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.doc-item:hover {
+  background: #ffffff;
+  border-color: #3b82f6;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.15);
+}
+
+.doc-preview {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.preview-icon {
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.doc-info h4 {
+  color: #1e3a8a;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.doc-size {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.quick-download {
+  width: 40px;
+  height: 40px;
+  background: #f59e0b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.quick-download:hover {
+  background-color: #d97706;
+  transform: scale(1.1);
+}
+
 .featured-docs {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
