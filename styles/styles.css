@@ -214,10 +214,26 @@ body {
     right: 20px;
 }
 
+/* Replace your existing .gallery-dots style with this */
 .gallery-dots {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
+    font-family: monospace; /* Looks like a digital counter */
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    background: #f1f5f9;
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 20px; /* Rounded pill shape */
+    
+    /* Center the badge horizontally */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: var(--shadow);
 }
+
+/* You can delete the .dot styles if you want, they are no longer used */
 
 .dot {
     display: inline-block;

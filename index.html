@@ -692,51 +692,41 @@
                 link.addEventListener('click', closeSidebar);
             });
         });
-        // Simple Gallery Functionality
+        
 // Simple Gallery Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.gallery-slide');
-    const dotsContainer = document.querySelector('.gallery-dots');
-    
-    // --- FIX: Clear old dots and create new ones automatically ---
-    dotsContainer.innerHTML = ''; 
-    
-    slides.forEach((_, index) => {
-        const dot = document.createElement('span');
-        dot.classList.add('dot');
-        if (index === 0) dot.classList.add('active');
-        dot.dataset.slide = index;
-        dotsContainer.appendChild(dot);
-    });
-    // -------------------------------------------------------------
-
-    // Re-select the newly created dots
-    const dots = document.querySelectorAll('.dot');
+    const dotsContainer = document.querySelector('.gallery-dots'); // We will use this for text now
     const prevBtn = document.querySelector('.gallery-nav.prev');
     const nextBtn = document.querySelector('.gallery-nav.next');
+    
     let currentSlide = 0;
     const totalSlides = slides.length;
 
+    // --- NEW: Update the text counter instead of dots ---
+    function updateCounter(index) {
+        // This will display "1 / 26", "2 / 26", etc.
+        dotsContainer.textContent = `${index + 1} / ${totalSlides}`;
+    }
+
     function showSlide(index) {
-        // Loop back to start/end if out of bounds
+        // Loop logic
         if (index >= totalSlides) index = 0;
         if (index < 0) index = totalSlides - 1;
 
-        // Hide all slides and dots
+        // Hide all slides
         slides.forEach(slide => slide.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
         
-        // Show the current slide
+        // Show current slide
         slides[index].classList.add('active');
         
-        // Safely show the current dot (Check if it exists first!)
-        if (dots[index]) {
-            dots[index].classList.add('active');
-        }
-
+        // Update the counter text
+        updateCounter(index);
+        
+        // OPTIONAL: Update background blur (from previous step)
         const imgSource = slides[index].querySelector('img').src;
         document.querySelector('.gallery-container').style.backgroundImage = `url('${imgSource}')`;
-        
+
         currentSlide = index;
     }
 
@@ -748,17 +738,10 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlide(currentSlide - 1);
     }
 
-    // Buttons
+    // Event listeners
     nextBtn.addEventListener('click', nextSlide);
     prevBtn.addEventListener('click', prevSlide);
     
-    // Click events for the new dots
-    dots.forEach(dot => {
-        dot.addEventListener('click', function() {
-            showSlide(parseInt(this.dataset.slide));
-        });
-    });
-
     // Auto-scroll
     let slideInterval = setInterval(nextSlide, 5000);
 
@@ -767,6 +750,9 @@ document.addEventListener('DOMContentLoaded', function() {
     galleryContainer.addEventListener('mouseleave', () => {
         slideInterval = setInterval(nextSlide, 5000);
     });
+
+    // Initialize first slide
+    showSlide(0);
 });
 
 // PDF Preview Functions
