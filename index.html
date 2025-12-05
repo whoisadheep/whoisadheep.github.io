@@ -137,7 +137,75 @@
                             <img src="img/4.jpeg" alt="Classroom learning" loading="lazy">
                         </div>
                         <div class="gallery-slide">
-                            <img src="img/3.jpeg" alt="School event" loading="lazy">
+                            <img src="img/5.jpg" alt="School event" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/29.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/30.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/31.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/9.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/10.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/11.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/12.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/13.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/14.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/15.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/16.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/17.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/18.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/19.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/20.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/21.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/22.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/23.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/24.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/25.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/27.jpg" alt="Sports day" loading="lazy">
+                        </div>
+                        <div class="gallery-slide">
+                            <img src="img/28.jpg" alt="Sports day" loading="lazy">
+                        </div><div class="gallery-slide">
+                            <img src="img/3.jpeg" alt="Sports day" loading="lazy">
                         </div>
                         <div class="gallery-slide">
                             <img src="img/1.jpeg" alt="Sports day" loading="lazy">
@@ -625,55 +693,77 @@
             });
         });
         // Simple Gallery Functionality
+// Simple Gallery Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.gallery-slide');
+    const dotsContainer = document.querySelector('.gallery-dots');
+    
+    // --- FIX: Clear old dots and create new ones automatically ---
+    dotsContainer.innerHTML = ''; 
+    
+    slides.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.dataset.slide = index;
+        dotsContainer.appendChild(dot);
+    });
+    // -------------------------------------------------------------
+
+    // Re-select the newly created dots
     const dots = document.querySelectorAll('.dot');
     const prevBtn = document.querySelector('.gallery-nav.prev');
     const nextBtn = document.querySelector('.gallery-nav.next');
     let currentSlide = 0;
     const totalSlides = slides.length;
 
-    // Show current slide
     function showSlide(index) {
+        // Loop back to start/end if out of bounds
+        if (index >= totalSlides) index = 0;
+        if (index < 0) index = totalSlides - 1;
+
+        // Hide all slides and dots
         slides.forEach(slide => slide.classList.remove('active'));
         dots.forEach(dot => dot.classList.remove('active'));
         
+        // Show the current slide
         slides[index].classList.add('active');
-        dots[index].classList.add('active');
+        
+        // Safely show the current dot (Check if it exists first!)
+        if (dots[index]) {
+            dots[index].classList.add('active');
+        }
+
+        const imgSource = slides[index].querySelector('img').src;
+        document.querySelector('.gallery-container').style.backgroundImage = `url('${imgSource}')`;
+        
         currentSlide = index;
     }
 
-    // Next slide
     function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        showSlide(currentSlide);
+        showSlide(currentSlide + 1);
     }
 
-    // Previous slide
     function prevSlide() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        showSlide(currentSlide);
+        showSlide(currentSlide - 1);
     }
 
-    // Event listeners
+    // Buttons
     nextBtn.addEventListener('click', nextSlide);
     prevBtn.addEventListener('click', prevSlide);
     
+    // Click events for the new dots
     dots.forEach(dot => {
         dot.addEventListener('click', function() {
             showSlide(parseInt(this.dataset.slide));
         });
     });
 
-    // Auto slide change every 5 seconds
+    // Auto-scroll
     let slideInterval = setInterval(nextSlide, 5000);
 
-    // Pause on hover
     const galleryContainer = document.querySelector('.gallery-container');
-    galleryContainer.addEventListener('mouseenter', () => {
-        clearInterval(slideInterval);
-    });
-    
+    galleryContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
     galleryContainer.addEventListener('mouseleave', () => {
         slideInterval = setInterval(nextSlide, 5000);
     });
